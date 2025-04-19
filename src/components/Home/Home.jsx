@@ -24,7 +24,7 @@ export default function Home() {
     let [searchItem22, setSearchItem22] = useState('cairo')
 
     function weather() {
-        axios.get(`http://api.weatherapi.com/v1/forecast.json?key=bfee6e438ecc4ff5a76164900241112&q=${searchItem22}&days=3&aqi=yes&alerts=no`)
+        axios.get(`https://api.weatherapi.com/v1/forecast.json?key=bfee6e438ecc4ff5a76164900241112&q=${searchItem22}&days=3&aqi=yes&alerts=no`)
             .then((res) => {
                 setText(res.data.current.condition.text)
                 setPhoto(`https://${res.data.current.condition.icon}`)
